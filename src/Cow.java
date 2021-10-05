@@ -10,15 +10,26 @@ public class Cow extends Tamagotchi{
         super.play();
         System.out.println("cowplay");
         VisualPrints.cowPlay();
-        petEnergy = petEnergy - 10;
-        System.out.println("energy is now " + petEnergy);
-        super.playreduceenergy();
-        //TODO mood change
+        //petEnergy = petEnergy - 10;
+        //System.out.println("energy is now " + petEnergy);
+        super.playreduceenergy(25);
+        //TODO
+        // - petsize affects
+        // - moodchange
+        // - hungerchange
+        // - timetick
+
     }
     @Override
     public void feed(){
-        System.out.println("cow eats");
+        System.out.println("cow eats 🐮 ");
         VisualPrints.hungryCow();
+    }
+    @Override
+    public void sleep(int sleeptime){
+        System.out.println("cow is now sleeping");
+        //visualPrints.sleepingcow
+
     }
 
 }

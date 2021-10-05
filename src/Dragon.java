@@ -1,4 +1,5 @@
 public class Dragon extends Tamagotchi{
+
     @Override
     public void play() {
         super.play();
