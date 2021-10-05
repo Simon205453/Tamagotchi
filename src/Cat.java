@@ -1,4 +1,4 @@
-public class Cat extends Tamagotchi{
+public class Cat extends Tamagotchi {
 
 
     public Cat(String petName, int petEnergy, double petAge, boolean isPetMale, int petSize, double mood, int hunger) {
