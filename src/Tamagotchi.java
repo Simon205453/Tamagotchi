@@ -45,6 +45,7 @@ public class Tamagotchi {
         }
         hunger = hunger - sleeptime * 2;
         System.out.println(petName + " is now sleeping and has it's energy restored to: " + petEnergy);
+        System.out.println("Your pets hunger level is now " + hunger);
 
     }
 

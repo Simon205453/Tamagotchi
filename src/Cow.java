@@ -23,12 +23,12 @@ public class Cow extends Tamagotchi{
     @Override
     public void feed(){
         System.out.println("cow eats 🐮 ");
-        VisualPrints.hungryCow();
+        VisualPrints.cowStand();
     }
     @Override
     public void sleep(int sleeptime){
         System.out.println("cow is now sleeping");
-        //visualPrints.sleepingcow
+        VisualPrints.cowSleep();
 
     }
 
