@@ -22,27 +22,20 @@ public class Cow extends Tamagotchi{
         super.play();
         VisualPrints.cowPlay();
         System.out.println(petName + " is now singing karaoke.. \n it's having a blast.");
-        //petEnergy = petEnergy - 10;
-        //System.out.println("energy is now " + petEnergy);
-        super.playreduceenergy(25);
-        //TODO
-        // - petsize affects
-        // - moodchange
-        // - hungerchange
-        // - timetick
-
+        super.timepassOfAction(10);
     }
     @Override
     public void feed(){
         System.out.println("cow eats 🐮 ");
         VisualPrints.cowFeed();
+        super.timepassOfAction(0);
     }
     @Override
     public void sleep(int sleeptime){
         super.sleep(sleeptime);
         System.out.println("cow is now sleeping");
         VisualPrints.cowSleep();
-
+        super.timepassOfAction(0);
     }
 
 }

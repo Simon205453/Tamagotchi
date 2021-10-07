@@ -43,7 +43,6 @@ public class VisualPrints {
         System.out.println("    )_ \\__;       ;           :_ ;  \\_\\       `,','");
         System.out.println("    :__\\  \\    * `,'*         \\  \\  :  \\   *  8`;'*  *");
         System.out.println("        `^'     \\ :/           `^'  `-^-'   \\v/ :  \\/ ");
-        System.out.println("");
     }
 
     public static void cowPlay() {
@@ -148,7 +147,23 @@ public class VisualPrints {
         System.out.println("         \\___--\"                    \\_____ )    ");
         System.out.println("                                             \"    ");
     }
-
+    public static void ripPet(){
+        System.out.println("        _.---,._,'		");
+        System.out.println("       /' _.--.<		");
+        System.out.println("         /'     `'		");
+        System.out.println("       /' _.---._____		");
+        System.out.println("       \\.'   ___, .-'`		");
+        System.out.println("           /'    \\             .		");
+        System.out.println("         /'       `-.          -|-		");
+        System.out.println("        |                       |		");
+        System.out.println("        |                   .-'~~~`-.		");
+        System.out.println("        |                 .'         `.		");
+        System.out.println("        |                 |  R  I  P  |		");
+        System.out.println("        |                 |           |		");
+        System.out.println("        |                 |           |		");
+        System.out.println("         \\              \\\\|           |//		");
+        System.out.println("   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^		");
+    }
 
 
 }

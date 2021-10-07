@@ -1,15 +1,10 @@
-import java.util.Random;
-
-
 public class Tamagotchi {
 
-
-    Random randomNum = new Random();
     public String petName;
     public int petEnergy = 100;
-    public double petAge = 0;   //make age grow according to timepass
-    public double mood = 100;         //make mood affected by hunger, and time since last play method run
-    public int hunger = 100;    //make hunger affect sleep method, mood, and energy max limit
+    public double petAge = 0;
+    public double mood = 100;
+    public int hunger = 100;
 
     public Tamagotchi(String petName, int petEnergy, double petAge, double mood, int hunger) {
         this.petName = petName;
@@ -21,12 +16,8 @@ public class Tamagotchi {
     }
 
     public void play() {
-        //change petenergy
-        //print play
         petEnergy = petEnergy - 10;
-        System.out.println("energy is now " + petEnergy);
-        System.out.println("this is Tamagotchi class TESTER NEEDS TO BE REMOVED");
-        // TODO remove sout line above, in Tamagotchi play method
+        System.out.println("energy is now ");
     }
 
     public void feed() {
@@ -39,9 +30,9 @@ public class Tamagotchi {
         mood = mood - 40;
 
         hunger = hunger - sleeptime * 2;
-        System.out.println(petName + " is now sleeping and has it's energy restored to: " + petEnergy);
-        if (petEnergy<100){
-            petEnergy=100;
+        System.out.println(petName + " is now sleeping and has it's energy restored to: ");
+        if (petEnergy < 100) {
+            petEnergy = 100;
             System.out.println("Your pets energy is full, and cannot be increased further.");
         }
         System.out.println("Your pets hunger level is now " + hunger);
@@ -49,12 +40,15 @@ public class Tamagotchi {
 
     }
 
-    public void playreduceenergy(int amount) {
-        //TODO
-        // - if mood is low more energy will be subtracted.
-        petAge = petAge++;
-        System.out.println("Time has passed, and you pet is now" + petAge + " units old.");
-        petEnergy = petEnergy - amount;
-        System.out.println(petEnergy);
+    public void timepassOfAction(int amount) {
+        petAge = petAge + 1 + amount * 0.2;
+        System.out.println("Time has passed, and you pet is now " + petAge + " units old.");
+        if (mood < 50) {
+            petEnergy = petEnergy - amount * 2;
+            System.out.println(petEnergy);
+        } else {
+            petEnergy = petEnergy - amount;
+            System.out.println(petName + "'s energy level is now " + petEnergy);
+        }
     }
 }
