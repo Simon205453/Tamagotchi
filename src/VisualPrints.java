@@ -24,7 +24,7 @@ public class VisualPrints {
         System.out.println("         ##V##         ##V##");
     }
 
-    public static void cowStand() {
+    public static void cowFeed() {
         System.out.println("                                       /;    ;\\");
         System.out.println("                                   __  \\\\____//");
         System.out.println("                                  /{_\\_/   `'\\____");

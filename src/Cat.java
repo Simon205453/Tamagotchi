@@ -1,8 +1,19 @@
 public class Cat extends Tamagotchi {
 
 
-    public Cat(String petName, int petEnergy, double petAge, boolean isPetMale, int petSize, double mood, int hunger) {
-        super(petName, petEnergy, petAge, isPetMale, petSize, mood, hunger);
+    public Cat(String petName, int petEnergy, double petAge, double mood, int hunger) {
+        super(petName, petEnergy, petAge, mood, hunger);
+    }
+
+    @Override
+    public String toString() {
+        return "Cat{" +
+                "petName='" + petName + '\'' +
+                ", petEnergy=" + petEnergy +
+                ", petAge=" + petAge +
+                ", mood=" + mood +
+                ", hunger=" + hunger +
+                '}';
     }
 
     @Override

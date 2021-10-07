@@ -7,25 +7,31 @@ public class Dog extends Tamagotchi {
                 "petName='" + petName + '\'' +
                 ", petEnergy=" + petEnergy +
                 ", petAge=" + petAge +
-                ", isPetMale=" + isPetMale +
-                ", petSize=" + petSize +
                 ", mood=" + mood +
                 ", hunger=" + hunger +
                 '}';
     }
 
 
-    public Dog(String petName, int petEnergy, double petAge, boolean isPetMale, int petSize, double mood, int hunger) {
-        super(petName, petEnergy, petAge, isPetMale, petSize, mood, hunger);
+    public Dog(String petName, int petEnergy, double petAge, double mood, int hunger) {
+        super(petName, petEnergy, petAge, mood, hunger);
 
 
     }
 
     @Override
     public void play() {
-        System.out.println("dogplay");
-
+        super.play();
     }
 
+    @Override
+    public void feed() {
+        super.feed();
+    }
+
+    @Override
+    public void sleep(int sleeptime) {
+        super.sleep(sleeptime);
+    }
 }
 

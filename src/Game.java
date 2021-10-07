@@ -8,13 +8,13 @@ public class Game {
 
     public static void choosePet(int petNum, String petName) {
         if (petNum == 1) {
-            pet = new Dog(petName, 100, 1, true, 10, 100, 100);
+            pet = new Dog(petName, 100, 1, 10, 100);
         } else if (petNum == 2) {
-            pet = new Cow(petName, 100, 1, true, 10, 100, 100);
+            pet = new Cow(petName, 100, 1, 10, 100);
         } else if (petNum == 3) {
-            pet = new Cat(petName, 100, 1, true, 10, 100, 100);
+            pet = new Cat(petName, 100, 1, 10, 100);
         } else if (petNum == 4) {
-            pet = new Dragon(petName, 100, 1, true, 10, 100, 100);
+            pet = new Dragon(petName, 100, 1,  10, 100);
         }
     }
 
@@ -24,8 +24,11 @@ public class Game {
         System.out.println("Choose pet \n Type: \n 1 - Cat \n 2 - Cow \n 3 - Dog");
         int petNum = scanner.nextInt();
         System.out.println("What would you like to name your pet?");
+        String flushedline = scanner.nextLine();
         String petName = scanner.nextLine();
+        System.out.println("System is now building your pet ✨");
         choosePet(petNum, petName);
+        System.out.println(petName + " is now ready to begin it's life in your hands" + pet);
 
 
         do {
@@ -43,7 +46,7 @@ public class Game {
                     System.out.println("Cow is eating");
                     break;
                 case 3:
-                    System.out.println("How long would you like your pet to sleep?");
+                    System.out.println("How long would you like your pet to sleep? (in seconds");
                     int sleeptime = scanner.nextInt();
                     pet.sleep(sleeptime);
                     sleep(sleeptime*100);
@@ -66,8 +69,8 @@ public class Game {
             } else if (pet.hunger <= 0) {
                 System.out.println("Hunger level is below 0, and your pet is therefore dead");
                 isPetAlive = false;
-            } else if (pet.petAge >= 100) {
-                System.out.println("Your pet is too old now, and your pet is now in heaven ❤");
+            } else if (pet.petAge >= 25) {
+                System.out.println("Your pet is too old now, and your pet is now in heaven ❤ good job looking after" + petName);
                 isPetAlive = false;
             }
         } while (isPetAlive);
